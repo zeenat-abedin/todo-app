@@ -1,0 +1,16 @@
+body {
+    background: #8d8d07ad;
+}
+
+
+.todo-container{
+    width: 40vw;
+    background: #000000af;
+    margin: 10rem auto;
+}
+
+.header{
+    margin: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
