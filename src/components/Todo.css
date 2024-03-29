@@ -5,8 +5,11 @@ body {
 
 .todo-container{
     width: 40vw;
-    background: #000000af;
+    background: #000000b9;
     margin: 10rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    color: #ffffff;
 }
 
 .header{
