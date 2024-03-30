@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Task({task,key,index}) {
+function Task({task,completed}) {
   return (
-    <div>
+      <div className='task' style={{ textDecoration: completed ? "line-through" : "" }}>
       {task.title}
     </div>
   )

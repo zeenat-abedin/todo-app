@@ -24,7 +24,7 @@ function Todo() {
     </div>
         <div className="tasks">
           {tasks.map((task, index) => (
-            <Task task={task} key={task.title} index={index} />
+            <Task task={task} key={task.title} index={index} completed={task.completed} />
           ))}
         </div>
         <div className="create-task">
