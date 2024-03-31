@@ -1,5 +1,6 @@
 import  { useState } from 'react'
 import Task from './Task'
+import CreateTask from './CreateTask'
 
 function Todo() {
   const [tasks, setTasks] = useState([
@@ -17,6 +18,15 @@ function Todo() {
     }
   ])
 
+  function handleAddTask(newTitle) {
+    if (newTitle === "") return;   
+    let newTask = {
+      title: newTitle,
+      completed: false
+    }
+    setTasks([...tasks, newTask]);    
+  }
+
     return (
     <div className='todo-container'>
     <div className='header'>
@@ -28,7 +38,7 @@ function Todo() {
           ))}
         </div>
         <div className="create-task">
-            <input type="text" placeholder="Enter Task Here..." id="newTask"/>
+          <CreateTask onAddTask={handleAddTask} />
         </div>
     </div>
   )
