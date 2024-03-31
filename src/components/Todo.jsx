@@ -34,8 +34,9 @@ function Todo() {
   }
 
   function handleRemoveTask(index) {
-    let filteredTasks = tasks.filter((i) => index !== i);
-    setTasks(filteredTasks);   
+    let filteredTasks = [...tasks];
+    filteredTasks[index].splice(index, 1);
+    setTasks(filteredTasks);  
   }
 
     return (
